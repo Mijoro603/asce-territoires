@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASCE Territoires | Audit, Surveillance, Conseil & Étude</title>
-    <!--script src="https://cdn.tailwindcss.com"></script-->
-    <script src="./tailwind.js"></script>
-    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"-->
-    <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--script src="./tailwind.js"></script-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.min.css"-->
     <script>
         tailwind.config = {
             theme: {
@@ -28,22 +28,50 @@
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex flex-col">
-                <span class="text-2xl font-black tracking-tight text-envGreen">ASCE <span class="text-accentGold">TERRITOIRES</span></span>
-                <span class="text-[10px] uppercase tracking-widest text-slate-500 font-medium -mt-1">Audit • Surveillance • Conseil • Étude</span>
+        <div class="bg-blue-600 text-white text-xs py-2 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+                <div class="flex items-center space-x-2">
+                    <span class="font-medium tracking-wide uppercase text-[10px] bg-blue-700 px-2 py-0.5 rounded text-blue-100">Agissons aujourd’hui, sauvons demain</span>
+                </div>
+                <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+                    <a href="tel:+261346886027" class="flex items-center gap-1.5 hover:text-blue-200 transition-colors">
+                        <i class="fa-solid fa-phone text-[11px]"></i>
+                        <span>+261 34 68 860 27</span>
+                    </a>
+                    <a href="https://wa.me/261346886027" target="_blank" class="flex items-center gap-1.5 hover:text-green-300 transition-colors text-green-100">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <span class="text-white">WhatsApp: +261346886027</span>
+                    </a>
+                    <a href="mailto:contact@asce-territoires.com" class="flex items-center gap-1.5 hover:text-blue-200 transition-colors">
+                        <i class="fa-solid fa-envelope text-[11px]"></i>
+                        <!--span>contact@asce-territoires.com</span-->
+                        <span>rafenotia@gmail.com</span>
+                    </a>
+                </div>
             </div>
-            <nav class="hidden md:flex space-x-6 font-medium text-sm text-slate-600">
-                <a href="#accueil" class="hover:text-envGreen transition-colors">Accueil</a>
-                <a href="#a-propos" class="hover:text-envGreen transition-colors">À Propos</a>
-                <a href="#expertises" class="hover:text-envGreen transition-colors">Nos Expertises</a>
-                <a href="#secteurs" class="hover:text-envGreen transition-colors">Secteurs</a>
-                <a href="#points-forts" class="hover:text-envGreen transition-colors">Points Forts</a>
-                <a href="#galerie" class="hover:text-envGreen transition-colors">Galerie</a>
-                <a href="#contact" class="hover:text-envGreen transition-colors">Contact</a>
-            </nav>
-            <div class="hidden lg:block text-right text-xs text-slate-400">
-                <p>&nbsp;</p>
+        </div>
+
+        <div class="bg-white/95 backdrop-blur">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-22 flex items-center justify-between py-2">
+                <a href="#accueil" class="flex items-center gap-3 group">
+                    <img src="./logo_asce.PNG" alt="Logo ASCE Territoires" class="h-14 w-auto object-contain transition-transform group-hover:scale-105">
+                    <div class="flex flex-col border-l border-slate-200 pl-3">
+                        <span class="text-xl font-black tracking-tight text-envGreen leading-none">ASCE <span class="text-accentGold">TERRITOIRES</span></span>
+                        <span class="text-[9px] uppercase tracking-widest text-slate-500 font-medium mt-1">Audit • Surveillance • Conseil • Étude</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-6 font-medium text-sm text-slate-600">
+                    <a href="#accueil" class="hover:text-envGreen transition-colors">Accueil</a>
+                    <a href="#a-propos" class="hover:text-envGreen transition-colors">À Propos</a>
+                    <a href="#expertises" class="hover:text-envGreen transition-colors">Nos Expertises</a>
+                    <a href="#secteurs" class="hover:text-envGreen transition-colors">Secteurs</a>
+                    <a href="#points-forts" class="hover:text-envGreen transition-colors">Points Forts</a>
+                    <a href="#galerie" class="hover:text-envGreen transition-colors">Galerie</a>
+                    <a href="#contact" class="hover:text-envGreen transition-colors">Contact</a>
+                </nav>
+                <div class="hidden lg:block text-right text-xs text-slate-400">
+                    <p>&nbsp;</p>
+                </div>
             </div>
         </div>
     </header>
@@ -69,28 +97,6 @@
     </section>
 
     <section id="a-propos" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!--div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-            <div class="lg:col-span-1 space-y-4">
-                <h2 class="text-xs font-bold tracking-widest text-accentGold uppercase">01 / Présentation</h2>
-                <h3 class="text-3xl font-bold text-slate-900 tracking-tight">Qui sommes-nous ?</h3>
-                <p class="text-slate-600 leading-relaxed">
-                    <strong>ASCE Territoires</strong> accompagne les donneurs d'ordre et les opérateurs sur l'ensemble du cycle de vie des projets complexes. Nous garantissons une conformité stricte aux standards nationaux et internationaux (SFI).
-                </p>
-            </div>
-
-            <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                    <div class="w-10 h-10 bg-envLight text-envGreen rounded-lg flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-bullseye"></i></div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Notre Mission</h4>
-                    <p class="text-sm text-slate-600">Accompagner les Aménagements du Territoire en offrant un service professionnel de haute qualité dans le cadre de Gestion Environnementale et Sociale.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                    <div class="w-10 h-10 bg-amber-100 text-accentGold rounded-lg flex items-center justify-center mb-4 text-lg"><i class="fa-solid fa-eye"></i></div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Notre Vision</h4>
-                    <p class="text-sm text-slate-600">Devenir une référence nationale de qualité et de fiabilité conformément à la vision du développement durable.</p>
-                </div>
-            </div>
-        </div-->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
             
             <div class="lg:col-span-1 space-y-4">
@@ -142,53 +148,6 @@
     </section>
 
     <section id="expertises" class="py-20 bg-slate-100/60">
-        <!--div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-xs font-bold tracking-widest text-accentGold uppercase">02 / Expertises</h2>
-                <h3 class="text-3xl font-bold text-slate-900">Nos Domaines d'Intervention Métiers</h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between">
-                    <div>
-                        <h4 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2 text-envGreen">
-                            <i class="fa-solid fa-leaf"></i> Évaluations Environnementales
-                        </h4>
-                        <ul class="space-y-2 text-xs text-slate-600">
-                            <li>• Études d'Impact Environnemental et Social (EIES) et audits</li>
-                            <li>• Élaboration et mise en œuvre de PGES</li>
-                            <li>• Pilotage lié aux ressources naturelles et énergies renouvelables</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between">
-                    <div>
-                        <h4 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2 text-envGreen">
-                            <i class="fa-solid fa-users"></i> Sauvegarde Sociale
-                        </h4>
-                        <ul class="space-y-2 text-xs text-slate-600">
-                            <li>• Plans d'Action de Réinstallation involontaire (PAR, PRI, PRMS)</li>
-                            <li>• Gestion des Violences Basées sur le Genre (VBG) & EAS/HS</li>
-                            <li>• Protection active et inclusion des groupes vulnérables</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between">
-                    <div>
-                        <h4 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2 text-envGreen">
-                            <i class="fa-solid fa-earth-africa"></i> Géomatique & SIG
-                        </h4>
-                        <ul class="space-y-2 text-xs text-slate-600">
-                            <li>• Télédétection par images satellites (SPOT, Landsat, QuickBird)</li>
-                            <li>• Modélisation Numérique de Terrain (MNT)</li>
-                            <li>• Cartographie sous ArcGIS, ArcView & MapInfo</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div-->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
                 <h2 class="text-xs font-bold tracking-widest text-accentGold uppercase">02 / Expertises Métiers & Études</h2>
@@ -318,24 +277,6 @@
     </section>
 
     <section id="secteurs" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!--div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-xs font-bold tracking-widest text-accentGold uppercase mb-2">03 / Secteurs</h2>
-            <h3 class="text-3xl font-bold text-slate-900">Nos Terrains de Jeu Stratégiques</h3>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div class="bg-slate-900 text-white p-6 rounded-xl">
-                <h4 class="text-lg font-bold text-emerald-400 mb-2">Infrastructures & Bâtiment</h4>
-                <p class="text-xs text-slate-300">Supervision E&S de chantiers routiers, d'ouvrages de génie civil et déploiement opérationnel des PGES.</p>
-            </div>
-            <div class="bg-slate-900 text-white p-6 rounded-xl">
-                <h4 class="text-lg font-bold text-emerald-400 mb-2">Industrie, Mines & Énergie</h4>
-                <p class="text-xs text-slate-300">Audits de diligence raisonnable (due diligence) et revues de conformité alignées sur les standards SFI.</p>
-            </div>
-            <div class="bg-slate-900 text-white p-6 rounded-xl">
-                <h4 class="text-lg font-bold text-emerald-400 mb-2">Environnement & Aires Protégées</h4>
-                <p class="text-xs text-slate-300">Plans de gestion pour zones écologiquement sensibles et conservation de la biodiversité.</p>
-            </div>
-        </div-->
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 class="text-xs font-bold tracking-widest text-accentGold uppercase">03 / Terrains de jeu</h2>
             <h3 class="text-3xl font-bold text-slate-900">Nos Secteurs d'Ancrage Stratégiques</h3>
@@ -364,66 +305,6 @@
     </section>
 
     <section id="points-forts" class="py-20 bg-imgBg">
-        <!--div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center mb-16">
-                <h3 class="text-2xl font-bold text-customBlue inline-block pb-2 border-b-4 border-accentGold tracking-wide uppercase">
-                    Les Points Forts de ASCE Territoires
-                </h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-                
-                <div class="flex flex-col space-y-4">
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm flex-1 flex flex-col">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="text-customBlue text-xl"><i class="fa-solid fa-industry"></i></span>
-                            <h4 class="font-bold text-sm tracking-wide text-customBlue uppercase">Approche Holistique</h4>
-                        </div>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Une expertise transversale unique capable de conciliar la preservation des composantes de l'environnement et la gestion des dynamiqyes sociales complexes
-                        </p>
-                    </div>
-                    <div class="flex items-center justify-center gap-2 pl-2">
-                        <span class="text-envGreen text-base"><i class="fa-solid fa-shield-halved"></i></span>
-                        <span class="text-emerald-600 font-bold text-sm">Intégration éco-sociale</span>
-                    </div>
-                </div>
-
-                <div class="flex flex-col space-y-4">
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm flex-1 flex flex-col">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="text-emerald-600 text-xl"><i class="fa-solid fa-magnifying-glass"></i></span>
-                            <h4 class="font-bold text-sm tracking-wide text-customBlue uppercase">Inovations & Réactivites</h4>
-                        </div>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Des technologies numériques au service d'un reporting E&S en temps réel optimisé pour le pilotage stratégique des UGP
-                        </p>
-                    </div>
-                    <div class="flex items-center justify-center gap-2 pl-2">
-                        <span class="text-blue-600 text-base"><i class="fa-solid fa-shield-halved"></i></span>
-                        <span class="text-emerald-600 font-bold text-sm">Digitalisation & Agilité</span>
-                    </div>
-                </div>
-
-                <div class="flex flex-col space-y-4">
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200/60 shadow-sm flex-1 flex flex-col">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="text-red-500 text-xl"><i class="fa-solid fa-gavel"></i></span>
-                            <h4 class="font-bold text-sm tracking-wide text-customBlue uppercase">Rigueur Institutionnelle</h4>
-                        </div>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Une parfaite maîtrise des exigences et politiques opérationnelles des bailleurs de fonds internationaux
-                        </p>
-                    </div>
-                    <div class="flex items-center justify-center gap-2 pl-2">
-                        <span class="text-blue-600 text-base"><i class="fa-solid fa-shield-halved"></i></span>
-                        <span class="text-emerald-600 font-bold text-sm">Conformité Standards internationaux</span>
-                    </div>
-                </div>
-
-            </div>
-        </div-->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
                 <h2 class="text-xs font-bold tracking-widest text-accentGold uppercase">04 / Atouts clés</h2>
@@ -670,31 +551,6 @@
                         <h4 class="text-md text-slate-900">Pour plus d'informations veuillez nous contacter s'il vous plaît</h4>
                         <img src="./images/logo.jpeg" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl">
                     </div>
-                <!--form onsubmit="event.preventDefault(); alert('Demande reçue ! Notre cabinet prendra contact avec vous.');" class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nom / Organisation</label>
-                        <input type="text" placeholder="Ex: Wildlife Conservation Society" class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-envGreen" required>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Adresse Email</label>
-                        <input type="email" placeholder="partenaire@wcs.org" class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-envGreen" required>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Domaine requis</label>
-                        <select class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-envGreen">
-                            <option>Études & Évaluations Environnementales (EIES/PGES)</option>
-                            <option>Sauvegarde Sociale & Réinstallation (PAR)</option>
-                            <option>Géomatique & SIG / Cartographie numérique</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message</label>
-                        <textarea rows="4" placeholder="Décrivez les besoins de votre projet..." class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-envGreen" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-envGreen hover:bg-envDark text-white font-bold py-2.5 rounded-lg text-sm transition-colors shadow-sm">
-                        Envoyer ma demande d'étude
-                    </button>
-                </form-->
             </div>
 
         </div>
