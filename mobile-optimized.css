@@ -1,0 +1,117 @@
+/* ==========================================================================
+   OPTIMISATION MOBILE - ASCE TERRITOIRES
+   S'applique uniquement sur les écrans inférieurs ou égaux à 768px (Mobiles)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    
+    /* 1. Réduction drastique de la taille des grands titres */
+    h1, .text-4xl, .text-5xl, .text-6xl {
+        font-size: 1.25rem !important; /* Équivalent à text-xl, optimal pour un h1 mobile */
+        line-height: 1.75rem !important;
+    }
+
+    h2, h3, .text-3xl {
+        font-size: 1.125rem !important; /* Équivalent à text-lg */
+        line-height: 1.5rem !important;
+    }
+
+    h4, .text-2xl, .text-xl {
+        font-size: 0.875rem !important; /* Équivalent à text-sm */
+        line-height: 1.25rem !important;
+    }
+
+    /* 2. Ajustement des textes normaux et petits en taille ultra-compacte (xs) */
+    p, span, li, a, label, .text-base, .text-sm {
+        font-size: 0.75rem !important; /* font-size: xs !important */
+        line-height: 1rem !important;
+    }
+
+    /* Exception pour les micro-textes (badges, sous-titres) pour qu'ils ne soient pas illisibles */
+    .text-xs {
+        font-size: 0.7rem !important;
+    }
+
+    /* 3. Réduction des marges et espacements entre les sections */
+    section, 
+    .py-20, 
+    .py-28 {
+        padding-top: 2rem !important;    /* Divise par 3 ou 4 l'espace vertical */
+        padding-bottom: 2rem !important; /* entre les blocs de contenu */
+    }
+
+    .mb-16, .mb-12, .my-16 {
+        margin-bottom: 1.5rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    .space-y-6 > :not([hidden]) ~ :not([hidden]),
+    .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-opacity: 1;
+        margin-top: 0.75rem !important; /* Rapproche les éléments internes (textes, boutons) */
+    }
+
+    .gap-12, .gap-8 {
+        gap: 1rem !important; /* Rapproche les grilles et colonnes qui passent à la ligne */
+    }
+
+    /* 4. Optimisation des conteneurs d'images et cartes */
+    .p-8 {
+        padding: 1rem !important; /* Rend les cartes des points forts moins massives */
+    }
+    
+    .p-6 {
+        padding: 0.85rem !important;
+    }
+
+    /* Ajustement de la Topbar de contact pour éviter qu'elle prenne trop de hauteur */
+    .py-3 {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    /* 5. En-tête / navigation - réorganisation mobile */
+    header .h-22 {
+        height: auto !important;
+        min-height: 4.5rem;
+    }
+
+    /* Logo plus compact sur mobile pour laisser la place au menu et à la recherche */
+    header img[alt="Logo ASCE Territoires"] {
+        height: 2.5rem !important;
+    }
+
+    /* Le sous-titre du logo est superflu sur très petit écran */
+    header .tracking-widest.text-slate-500 {
+        display: none;
+    }
+
+    /* Le panneau du menu mobile passe au-dessus du contenu, sans pousser la mise en page */
+    #mobile-menu {
+        position: relative;
+        z-index: 40;
+    }
+
+    /* Vignettes du menu mobile (Activités / Secteurs) : taille fixe garantie */
+    #mobile-menu img {
+        width: 2rem !important;
+        height: 2rem !important;
+        flex-shrink: 0;
+    }
+
+    /* 6. Section d'accueil (hero) : hauteur réduite + diaporama toujours visible en fond */
+    #accueil {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+        min-height: 60vh;
+    }
+
+    #hero-slideshow img {
+        object-position: center;
+    }
+
+    /* 7. Empêche tout débordement horizontal causé par les larges menus déroulants desktop */
+    body {
+        overflow-x: hidden;
+    }
+}

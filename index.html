@@ -12,6 +12,7 @@
 	<link rel="icon" type="image/x-icon" href="./logo_asce.PNG">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./mobile-optimized.css">
     <script>
         tailwind.config = {
             theme: {
@@ -54,38 +55,201 @@
             </div>
         </div>
 
-        <div class="bg-white/95 backdrop-blur">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-22 flex items-center justify-between py-2">
-                <a href="#accueil" class="flex items-center gap-3 group">
+        <div class="bg-white/95 backdrop-blur relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-22 flex items-center justify-between py-2 gap-4">
+                <a href="#accueil" class="flex items-center gap-3 group shrink-0">
                     <img src="./logo_asce_t.PNG" alt="Logo ASCE Territoires" class="h-14 w-auto object-contain transition-transform group-hover:scale-105">
                     <div class="flex flex-col border-l border-slate-200 pl-3">
                         <span class="text-xl font-black tracking-tight text-envGreen leading-none">ASCE <span class="text-accentGold">TERRITOIRES</span></span>
                         <span class="text-[9px] uppercase tracking-widest text-slate-500 font-medium mt-1">Audit • Surveillance • Conseil • Étude</span>
                     </div>
                 </a>
-                <nav class="hidden md:flex space-x-6 font-medium text-sm text-slate-600">
-                    <a href="#accueil" class="hover:text-envGreen transition-colors">Accueil</a>
-                    <a href="#a-propos" class="hover:text-envGreen transition-colors">À Propos</a>
-                    <a href="#expertises" class="hover:text-envGreen transition-colors">Nos Expertises</a>
-                    <a href="#secteurs" class="hover:text-envGreen transition-colors">Secteurs</a>
-                    <a href="#points-forts" class="hover:text-envGreen transition-colors">Points Forts</a>
-                    <a href="#galerie" class="hover:text-envGreen transition-colors">Galerie</a>
-                    <a href="#contact" class="hover:text-envGreen transition-colors">Contact</a>
+
+                <!-- Navigation principale desktop avec menus déroulants -->
+                <nav class="hidden md:flex items-center space-x-1 font-medium text-sm text-slate-600">
+                    <a href="#accueil" class="px-3 py-2 rounded-lg hover:text-envGreen hover:bg-slate-50 transition-colors">Accueil</a>
+                    <a href="#a-propos" class="px-3 py-2 rounded-lg hover:text-envGreen hover:bg-slate-50 transition-colors">À Propos</a>
+
+                    <!-- Méga-menu : Activités -->
+                    <div class="relative group">
+                        <button type="button" class="flex items-center gap-1 px-3 py-2 rounded-lg hover:text-envGreen hover:bg-slate-50 transition-colors">
+                            Activités <i class="fa-solid fa-chevron-down text-[10px] mt-0.5 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[560px] z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-4 grid grid-cols-2 gap-3">
+                                <a href="#etudes-environnementales" class="menu-thumb flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors">
+                                    <img src="./images/Image3.jpg" alt="Études et évaluations environnementales" class="w-14 h-14 rounded-lg object-cover shrink-0">
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Études</p>
+                                        <p class="text-xs text-slate-500">Études & évaluations environnementales</p>
+                                    </div>
+                                </a>
+                                <a href="#sauvegarde-sociale" class="menu-thumb flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors">
+                                    <img src="./images/imagec.jpeg" alt="Sauvegarde sociale et développement" class="w-14 h-14 rounded-lg object-cover shrink-0">
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Sauvegarde</p>
+                                        <p class="text-xs text-slate-500">Sauvegarde sociale & développement</p>
+                                    </div>
+                                </a>
+                                <a href="#amenagement-territoire" class="menu-thumb flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors">
+                                    <img src="./images/imaged.jpeg" alt="Aménagement du territoire" class="w-14 h-14 rounded-lg object-cover shrink-0">
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Aménagement</p>
+                                        <p class="text-xs text-slate-500">Aménagement du territoire</p>
+                                    </div>
+                                </a>
+                                <a href="#donnees-statistiques" class="menu-thumb flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors">
+                                    <img src="./images/Image6.jpg" alt="Gestion de données et statistiques" class="w-14 h-14 rounded-lg object-cover shrink-0">
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Données</p>
+                                        <p class="text-xs text-slate-500">Gestion de données & statistiques</p>
+                                    </div>
+                                </a>
+                                <a href="#geomatique-sig" class="menu-thumb flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors col-span-2">
+                                    <img src="./images/image9.jpeg" alt="Géomatique et SIG" class="w-14 h-14 rounded-lg object-cover shrink-0">
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Géomatique & SIG</p>
+                                        <p class="text-xs text-slate-500">Télédétection, cartographie numérique</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Méga-menu : Secteurs -->
+                    <div class="relative group">
+                        <button type="button" class="flex items-center gap-1 px-3 py-2 rounded-lg hover:text-envGreen hover:bg-slate-50 transition-colors">
+                            Secteurs <i class="fa-solid fa-chevron-down text-[10px] mt-0.5 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[520px] z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-4 grid grid-cols-1 gap-2">
+                                <a href="#infrastructures-batiment" class="menu-thumb flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors">
+                                    <img src="./images/imageb.jpeg" alt="Infrastructures et bâtiment" class="w-14 h-14 rounded-lg object-cover shrink-0">
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Infrastructures & Bâtiment</p>
+                                        <p class="text-xs text-slate-500">Supervision E&S de chantiers</p>
+                                    </div>
+                                </a>
+                                <a href="#industrie-mines-energie" class="menu-thumb flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors">
+                                    <img src="./images/Image8.png" alt="Industrie, mines et énergie" class="w-14 h-14 rounded-lg object-cover shrink-0">
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Industrie, Mines & Énergie</p>
+                                        <p class="text-xs text-slate-500">Audits de conformité, due diligence</p>
+                                    </div>
+                                </a>
+                                <a href="#environnement-aires-protegees" class="menu-thumb flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition-colors">
+                                    <img src="./images/Image1.jpg" alt="Environnement et aires protégées" class="w-14 h-14 rounded-lg object-cover shrink-0">
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900">Environnement & Aires Protégées</p>
+                                        <p class="text-xs text-slate-500">Conservation de la biodiversité</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#points-forts" class="px-3 py-2 rounded-lg hover:text-envGreen hover:bg-slate-50 transition-colors">Points Forts</a>
+                    <a href="#contact" class="px-3 py-2 rounded-lg hover:text-envGreen hover:bg-slate-50 transition-colors">Contact</a>
                 </nav>
-                <div class="hidden lg:block text-right text-xs text-slate-400">
-                    <p>&nbsp;</p>
+
+                <div class="flex items-center gap-2 shrink-0">
+                    <!-- Barre de recherche -->
+                    <div class="relative hidden sm:block">
+                        <button type="button" id="search-btn" aria-label="Lancer la recherche" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-envGreen text-xs transition-colors">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input
+                            type="search"
+                            id="site-search"
+                            placeholder="Rechercher..."
+                            class="w-40 lg:w-56 pl-9 pr-3 py-2 text-sm rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-envGreen/40 transition-all"
+                            autocomplete="off">
+                        <div id="search-results" class="hidden absolute left-0 top-full mt-2 w-72 max-h-80 overflow-y-auto bg-white rounded-xl shadow-xl border border-slate-100 z-50 p-2"></div>
+                    </div>
+
+                    <!-- Bouton menu mobile -->
+                    <button id="mobile-menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
                 </div>
             </div>
+
+            <!-- Panneau menu mobile -->
+            <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white px-4 py-4 space-y-1 max-h-[75vh] overflow-y-auto">
+                <div class="relative pb-3">
+                    <button type="button" id="search-btn-mobile" aria-label="Lancer la recherche" class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-envGreen text-xs transition-colors" style="top: calc(50% - 0.375rem);">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <input type="search" id="site-search-mobile" placeholder="Rechercher..." class="w-full pl-9 pr-3 py-2 text-sm rounded-lg border border-slate-200 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-envGreen/40" autocomplete="off">
+                    <div id="search-results-mobile" class="hidden mt-2 max-h-64 overflow-y-auto bg-white rounded-xl shadow border border-slate-100 p-2"></div>
+                </div>
+                <a href="#accueil" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Accueil</a>
+                <a href="#a-propos" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">À Propos</a>
+
+                <details class="group">
+                    <summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 cursor-pointer list-none">
+                        Activités <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="pl-3 pb-2 space-y-1">
+                        <a href="#etudes-environnementales" class="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-slate-600 hover:bg-slate-50">
+                            <img src="./images/Image3.jpg" class="w-8 h-8 rounded object-cover"> Études
+                        </a>
+                        <a href="#sauvegarde-sociale" class="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-slate-600 hover:bg-slate-50">
+                            <img src="./images/imagec.jpeg" class="w-8 h-8 rounded object-cover"> Sauvegarde
+                        </a>
+                        <a href="#amenagement-territoire" class="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-slate-600 hover:bg-slate-50">
+                            <img src="./images/imaged.jpeg" class="w-8 h-8 rounded object-cover"> Aménagement
+                        </a>
+                        <a href="#donnees-statistiques" class="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-slate-600 hover:bg-slate-50">
+                            <img src="./images/Image6.jpg" class="w-8 h-8 rounded object-cover"> Données
+                        </a>
+                        <a href="#geomatique-sig" class="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-slate-600 hover:bg-slate-50">
+                            <img src="./images/image9.jpeg" class="w-8 h-8 rounded object-cover"> Géomatique & SIG
+                        </a>
+                    </div>
+                </details>
+
+                <details class="group">
+                    <summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 cursor-pointer list-none">
+                        Secteurs <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="pl-3 pb-2 space-y-1">
+                        <a href="#infrastructures-batiment" class="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-slate-600 hover:bg-slate-50">
+                            <img src="./images/imageb.jpeg" class="w-8 h-8 rounded object-cover"> Infrastructures & Bâtiment
+                        </a>
+                        <a href="#industrie-mines-energie" class="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-slate-600 hover:bg-slate-50">
+                            <img src="./images/Image8.png" class="w-8 h-8 rounded object-cover"> Industrie, Mines & Énergie
+                        </a>
+                        <a href="#environnement-aires-protegees" class="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-slate-600 hover:bg-slate-50">
+                            <img src="./images/Image1.jpg" class="w-8 h-8 rounded object-cover"> Environnement & Aires Protégées
+                        </a>
+                    </div>
+                </details>
+
+                <a href="#points-forts" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Points Forts</a>
+                <a href="#contact" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <section id="accueil" class="relative bg-gradient-to-br from-envDark to-envGreen text-white py-28 px-4 sm:px-6 lg:px-8">
-        <div class="absolute inset-0 bg-black/20 mix-blend-multiply"></div>
+    <section id="accueil" class="relative overflow-hidden bg-envLight text-white py-28 px-4 sm:px-6 lg:px-8">
+        <!-- Diaporama d'images de fond en fondu enchaîné -->
+        <div id="hero-slideshow" class="absolute inset-0">
+            <img src="./images/Image2.jpg" alt="Ouvrage hydraulique en milieu naturel" class="hero-slide absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-[1500ms] ease-in-out">
+            <img src="./images/Image4.jpg" alt="Biodiversité aquatique" class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-[1500ms] ease-in-out">
+            <img src="./images/Image5.png" alt="Mobilité des populations riveraines" class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-[1500ms] ease-in-out">
+            <img src="./images/Image7.png" alt="Faune entomologique" class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-[1500ms] ease-in-out">
+            <img src="./images/imagea.jpeg" alt="Supervision de chantier" class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-[1500ms] ease-in-out">
+            <img src="./images/imagee.jpeg" alt="Contrôle de sécurité" class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-[1500ms] ease-in-out">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-br from-envLight/50 to-envLight/10"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
+
         <div class="relative max-w-5xl mx-auto text-center space-y-6">
             <h1 class="text-4xl sm:text-2xl lg:text-6xl font-extrabold tracking-tight leading-tight">
                 Gestion Intégrée des Risques <br><span class="text-envLight">Environnementaux & Sociaux</span>
             </h1>
-            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-emerald-100/90 font-light">
+            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-emerald-100/90 font-light leading-relaxed">
                 Nous transformons les contraintes de sauvegarde réglementaires en leviers de performance pour les territoires et la biodiversité.
             </p>
             <div class="pt-4 flex flex-wrap justify-center gap-4">
@@ -157,7 +321,8 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col">
+                <div id="etudes-environnementales" class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col scroll-mt-28">
+                    <img src="./images/Image3.jpg" alt="Études et évaluations environnementales" class="w-full h-40 object-cover">
                     <div class="p-6 border-b border-slate-100 bg-gradient-to-r from-envDark/5 to-transparent">
                         <h4 class="font-bold text-lg text-slate-900 flex items-center gap-3">
                             <span class="text-envGreen"><i class="fa-solid fa-leaf"></i></span>
@@ -182,7 +347,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col">
+                <div id="sauvegarde-sociale" class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col scroll-mt-28">
+                    <img src="./images/imagec.jpeg" alt="Sauvegarde sociale et développement" class="w-full h-40 object-cover">
                     <div class="p-6 border-b border-slate-100 bg-gradient-to-r from-envDark/5 to-transparent">
                         <h4 class="font-bold text-lg text-slate-900 flex items-center gap-3">
                             <span class="text-envGreen"><i class="fa-solid fa-users"></i></span>
@@ -203,7 +369,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col">
+                <div id="amenagement-territoire" class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col scroll-mt-28">
+                    <img src="./images/imaged.jpeg" alt="Aménagement du territoire" class="w-full h-40 object-cover">
                     <div class="p-6 border-b border-slate-100 bg-gradient-to-r from-envDark/5 to-transparent">
                         <h4 class="font-bold text-lg text-slate-900 flex items-center gap-3">
                             <span class="text-envGreen"><i class="fa-solid fa-map-marked-alt"></i></span>
@@ -224,7 +391,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col md:col-span-1 lg:col-span-1">
+                <div id="donnees-statistiques" class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col md:col-span-1 lg:col-span-1 scroll-mt-28">
+                    <img src="./images/Image6.jpg" alt="Gestion de données et statistiques" class="w-full h-40 object-cover">
                     <div class="p-6 border-b border-slate-100 bg-gradient-to-r from-envDark/5 to-transparent">
                         <h4 class="font-bold text-lg text-slate-900 flex items-center gap-3">
                             <span class="text-envGreen"><i class="fa-solid fa-chart-bar"></i></span>
@@ -239,7 +407,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col md:col-span-1 lg:col-span-2">
+                <div id="geomatique-sig" class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden flex flex-col md:col-span-1 lg:col-span-2 scroll-mt-28">
+                    <img src="./images/image9.jpeg" alt="Géomatique et SIG" class="w-full h-40 object-cover">
                     <div class="p-6 border-b border-slate-100 bg-gradient-to-r from-envDark/5 to-transparent">
                         <h4 class="font-bold text-lg text-slate-900 flex items-center gap-3">
                             <span class="text-envGreen"><i class="fa-solid fa-earth-africa"></i></span>
@@ -270,23 +439,26 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div class="bg-slate-900 text-white p-8 rounded-2xl relative overflow-hidden group">
+            <div id="infrastructures-batiment" class="bg-slate-900 text-white p-8 rounded-2xl relative overflow-hidden group scroll-mt-28">
                 <h4 class="text-xl font-bold mb-4 text-emerald-400">Infrastructures et Bâtiment</h4>
                 <p class="text-sm text-slate-300 leading-relaxed">
                     Supervision E&S de chantiers routiers et de grands ouvrages de génie civil. Nous assurons le déploiement opérationnel des PGES sur le terrain, le suivi strict des indicateurs de performance et la maîtrise optimale des risques de chantier.
                 </p>
+                <img src="./images/imageb.jpeg" alt="Infrastructures et bâtiment" class="w-full h-40 object-cover rounded-lg my-4">
             </div>
-            <div class="bg-slate-900 text-white p-8 rounded-2xl relative overflow-hidden group">
+            <div id="industrie-mines-energie" class="bg-slate-900 text-white p-8 rounded-2xl relative overflow-hidden group scroll-mt-28">
+                <img src="./images/Image8.png" alt="Industrie, mines et énergie" class="w-full h-40 object-cover rounded-lg my-4">
                 <h4 class="text-xl font-bold mb-4 text-emerald-400">Industrie, Mines et Énergie</h4>
                 <p class="text-sm text-slate-300 leading-relaxed">
                     Audits de conformité et gestion des impacts pour les projets extractifs et d'électrification. Nous réalisons des audits de diligence raisonnable (<span class="italic text-slate-400">due diligence</span>) et des revues de conformité alignées sur les plus hauts standards internationaux.
                 </p>
             </div>
-            <div class="bg-slate-900 text-white p-8 rounded-2xl relative overflow-hidden group">
+            <div id="environnement-aires-protegees" class="bg-slate-900 text-white p-8 rounded-2xl relative overflow-hidden group scroll-mt-28">
                 <h4 class="text-xl font-bold mb-4 text-emerald-400">Environnement et Aires Protégées</h4>
                 <p class="text-sm text-slate-300 leading-relaxed">
                     Aménagement territorial et préservation/conservation de la biodiversité. Nous concevons des plans de gestion pour les zones écologiquement sensibles et sécurisons l'adhésion fine des projets auprès des populations riveraines.
                 </p>
+                <img src="./images/Image1.jpg" alt="Environnement et aires protégées" class="w-full h-40 object-cover rounded-lg my-4">
             </div>
         </div>
     </section>
@@ -328,189 +500,14 @@
                     </div>
                     <h4 class="font-bold text-lg text-slate-900">Rigueur Institutionnelle</h4>
                     <p class="text-xs text-accentGold font-semibold uppercase tracking-wider">Conformité Standards Internationaux</p>
-                    <p class="text-sm text-slate-600 Hills leading-relaxed">
+                    <p class="text-sm text-slate-600 leading-relaxed">
                         Une parfaite maîtrise des exigences, réglementations et politiques opérationnelles rigoureuses des principaux bailleurs de fonds internationaux (notamment la SFI).
                     </p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="galerie" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-xs font-bold tracking-widest text-accentGold uppercase">05 / Galerie</h2>
-                <h3 class="text-3xl font-bold text-slate-900">Terrains d'Étude & Environnements Écosensibles</h3>
-                <p class="text-slate-600 text-sm">Découvrez nos réalisations dans les domaines de l'ingénierie et de l'environnement.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/Image3.jpg" alt="Vue aérienne d'une zone humide et de canaux naturels entourés de palmiers" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Zone Humide Sensible</p>
-                        <p class="text-xs text-slate-500 mt-1">Suivi environnemental des écosystèmes aquatiques et riverains.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/Image2.jpg" alt="Ouvrage hydraulique en béton avec écoulement d'eau au milieu de la végétation" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Ouvrage Hydraulique</p>
-                        <p class="text-xs text-slate-500 mt-1">Suivi environnemental des infrastructures et de leur intégration au milieu naturel.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/Image1.jpg" alt="Cascade naturelle s'écoulant sur des rochers en pleine forêt" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Ressource en Eau Naturelle</p>
-                        <p class="text-xs text-slate-500 mt-1">Préservation des cours d'eau et des milieux naturels sensibles.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/Image6.jpg" alt="Front rocheux mis à nu par une érosion de terrain sur un talus" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Étude Géotechnique</p>
-                        <p class="text-xs text-slate-500 mt-1">Diagnostic des risques d'érosion et suivi environnemental des talus.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/Image5.png" alt="Habitants traversant une rivière en pirogue avec des motos" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Mobilité des Populations Riveraines</p>
-                        <p class="text-xs text-slate-500 mt-1">Diagnostic territorial et enquêtes socio-économiques de terrain.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/Image4.jpg" alt="Groupe de canards nageant parmi les roseaux d'un plan d'eau" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Biodiversité Aquatique</p>
-                        <p class="text-xs text-slate-500 mt-1">Observation de la faune et suivi des écosystèmes humides.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/Image7.png" alt="Libellule posée sur une branche dans un environnement naturel" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Faune Entomologique</p>
-                        <p class="text-xs text-slate-500 mt-1">Relevés de biodiversité sur les sites d'étude.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/Image8.png" alt="Vue aérienne d'un site industriel de concassage avec convoyeurs" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Site Industriel & Carrière</p>
-                        <p class="text-xs text-slate-500 mt-1">Audit de conformité environnementale sur site extractif.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/image9.jpeg" alt="Papillon posé sur un talus de terre au milieu de feuilles mortes" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Observation Naturaliste</p>
-                        <p class="text-xs text-slate-500 mt-1">Relevés de terrain sur la biodiversité locale.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/imagea.jpeg" alt="Équipe d'ouvriers alignés avec équipements de sécurité sur un chantier routier" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Supervision de Chantier</p>
-                        <p class="text-xs text-slate-500 mt-1">Suivi des équipes et des mesures de sécurité sur site.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/imagee.jpeg" alt="Contrôle d'alcootest effectué sur un conducteur près d'un véhicule de chantier" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Contrôle de Sécurité</p>
-                        <p class="text-xs text-slate-500 mt-1">Vérification des mesures de sécurité et de conformité sur chantier.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/imageb.jpeg" alt="Ouvriers appliquant un traitement anti-poussière sur une route en chantier" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Contrôle Environnemental de Chantier</p>
-                        <p class="text-xs text-slate-500 mt-1">Application de mesures d'atténuation des nuisances (abattage de poussières).</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/imagec.jpeg" alt="Réunion publique avec des représentants officiels face à une foule de villageois" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Consultation Communautaire</p>
-                        <p class="text-xs text-slate-500 mt-1">Réunion d'information et de dialogue avec les populations locales.</p>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm cursor-pointer" onclick="openLightbox(this)">
-                    <img src="./images/imaged.jpeg" alt="Foule assise assistant à un rassemblement communautaire en extérieur" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-3xl">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </div>
-                    <div class="p-4 bg-slate-50 border-t border-slate-100">
-                        <p class="text-xs font-bold text-envGreen uppercase tracking-wider">Engagement Communautaire</p>
-                        <p class="text-xs text-slate-500 mt-1">Séance de sensibilisation et d'échange avec les communautés riveraines.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden flex-col items-center justify-center p-4">
-        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-accentGold transition-colors focus:outline-none">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <img id="lightbox-img" src="" alt="Agrandissement" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl">
-        <p id="lightbox-caption" class="text-white text-sm mt-4 font-medium text-center max-w-2xl bg-black/40 px-4 py-2 rounded-full"></p>
-    </div>
+    <!-- Section Contact Uniquement -->
     <section id="contact" class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 class="text-xs font-bold tracking-widest text-accentGold uppercase">06 / Nous contacter</h2>
@@ -518,17 +515,22 @@
             <p class="text-slate-600 text-sm">Sécurisez vos investissements grâce à notre expertise en analyses environnementales et sociales.</p>
         </div>
         <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-md border border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Colonne Gauche : Invitation à l'échange -->
             <div class="space-y-6">                
                 <p class="text-slate-600 text-sm leading-relaxed">
                     Vous êtes un donneur d'ordre ou un organisme de développement international ? Sollicitez notre expertise indépendante pour vos études d'impact, audits E&S ou analyses géomatiques. Pour plus d'informations, veuillez nous contacter s'il vous plaît.
                 </p>
             </div>
+
+            <!-- Colonne Droite : Image de contact agrandie -->
             <div class="flex flex-col items-center justify-center">
                 <div class="w-full bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-inner group overflow-hidden">
                     <img src="./images/logo.jpeg" 
                          alt="Contact ASCE Territoires" 
                          class="w-full h-auto max-h-[450px] object-contain rounded-xl shadow-md transition-transform duration-300 group-hover:scale-[1.02]">
                 </div>
+                <!-- Coordonnées (optionnel, adaptables selon vos besoins) -->
                 <div class="space-y-2 pt-2 text-xs text-slate-500">
                     <p><i class="fa-solid fa-clock text-envGreen mr-2"></i> Disponibilité : Lundi au Vendredi (Heures de bureau)</p>
                 </div>
@@ -543,7 +545,7 @@
                 <p class="text-white font-bold text-sm tracking-wide">ASCE TERRITOIRES</p>
                 <p class="text-white font-bold text-sm tracking-wide">
                     <i class="fa-solid fa-phone text-[11px]"></i>
-                    <span>Téléphone : +261 34 68 860 27</span>
+                    <span>Téléphone: +261 34 68 860 27</span>
                 </p>
                 <p class="text-white font-bold text-sm tracking-wide">
                     <i class="fa-brands fa-whatsapp text-sm"></i>
@@ -561,31 +563,187 @@
     </footer>
 
     <script>
-        function openLightbox(element) {
-            const imgUrl = element.querySelector('img').src;
-            const captionText = element.querySelector('p.text-xs.text-slate-500').innerText;
-            
-            document.getElementById('lightbox-img').src = imgUrl;
-            document.getElementById('lightbox-caption').innerText = captionText;
-            
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('hidden');
-            lightbox.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        }
+        // ------------------------------------------------------------------
+        // 1. Menu mobile (ouverture/fermeture + fermeture au clic sur un lien)
+        // ------------------------------------------------------------------
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('flex');
-            lightbox.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeLightbox();
-            }
+        mobileBtn.addEventListener('click', function () {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+            mobileBtn.querySelector('i').classList.toggle('fa-bars', isOpen);
+            mobileBtn.querySelector('i').classList.toggle('fa-xmark', !isOpen);
         });
+
+        mobileMenu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                mobileMenu.classList.add('hidden');
+                mobileBtn.setAttribute('aria-expanded', 'false');
+                mobileBtn.querySelector('i').classList.add('fa-bars');
+                mobileBtn.querySelector('i').classList.remove('fa-xmark');
+            });
+        });
+
+        // ------------------------------------------------------------------
+        // 2. Diaporama d'images en fondu enchaîné (fond de la section Accueil)
+        // ------------------------------------------------------------------
+        (function () {
+            const slides = document.querySelectorAll('#hero-slideshow .hero-slide');
+            if (!slides.length) return;
+            let current = 0;
+            setInterval(function () {
+                slides[current].classList.add('opacity-0');
+                slides[current].classList.remove('opacity-100');
+                current = (current + 1) % slides.length;
+                slides[current].classList.remove('opacity-0');
+                slides[current].classList.add('opacity-100');
+            }, 5000); // change d'image toutes les 5 secondes
+        })();
+
+        // ------------------------------------------------------------------
+        // 3. Recherche interne (site statique, sans backend)
+        //    Index : libellé + mots-clés + image -> id de section/carte cible
+        // ------------------------------------------------------------------
+        const searchIndex = [
+            { label: 'Accueil', id: 'accueil', keywords: ['accueil'] },
+            { label: 'À Propos', id: 'a-propos', keywords: ['a propos', 'qui sommes-nous'] },
+            { label: 'Études et Évaluations Environnementales', id: 'etudes-environnementales', image: './images/Image3.jpg', keywords: ['etudes', 'eies', 'pges', 'evaluations environnementales'] },
+            { label: 'Sauvegarde Sociale et Développement Durable', id: 'sauvegarde-sociale', image: './images/imagec.jpeg', keywords: ['sauvegarde', 'vbg', 'eas/hs', 'social'] },
+            { label: 'Aménagement du Territoire', id: 'amenagement-territoire', image: './images/imaged.jpeg', keywords: ['amenagement', 'territoire', 'urbanisme'] },
+            { label: 'Gestion de Données et Statistiques', id: 'donnees-statistiques', image: './images/Image6.jpg', keywords: ['donnees', 'statistiques', 'enquetes'] },
+            { label: 'Géomatique et SIG', id: 'geomatique-sig', image: './images/image9.jpeg', keywords: ['geomatique', 'sig', 'teledetection', 'cartographie'] },
+            { label: 'Secteurs', id: 'secteurs', keywords: ['secteurs'] },
+            { label: 'Infrastructures et Bâtiment', id: 'infrastructures-batiment', image: './images/imageb.jpeg', keywords: ['infrastructures', 'batiment', 'chantier'] },
+            { label: 'Industrie, Mines et Énergie', id: 'industrie-mines-energie', image: './images/Image8.png', keywords: ['industrie', 'mines', 'energie'] },
+            { label: 'Environnement et Aires Protégées', id: 'environnement-aires-protegees', image: './images/Image1.jpg', keywords: ['environnement', 'aires protegees', 'biodiversite'] },
+            { label: 'Points Forts', id: 'points-forts', keywords: ['points forts', 'atouts'] },
+            { label: 'Contact', id: 'contact', keywords: ['contact'] },
+        ];
+
+        // Retire les accents pour une comparaison plus tolérante (é -> e, etc.)
+        function normalize(str) {
+            return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+        // b) Filtre les entrées de l'index dont le libellé ou les mots-clés correspondent à la saisie
+        function filterResults(query) {
+            const q = normalize(query.trim());
+            if (!q) return [];
+            return searchIndex.filter(function (entry) {
+                if (normalize(entry.label).includes(q)) return true;
+                return entry.keywords.some(function (k) { return normalize(k).includes(q); });
+            });
+        }
+
+        // c) Affiche uniquement les résultats filtrés dans la zone de résultats prévue
+        function renderResults(results, resultsEl, inputEl) {
+            resultsEl.innerHTML = '';
+
+            if (!results.length) {
+                resultsEl.innerHTML = '<p class="text-xs text-slate-400 px-2 py-3 text-center">Aucun résultat trouvé.</p>';
+                resultsEl.classList.remove('hidden');
+                return;
+            }
+
+            results.forEach(function (entry) {
+                const row = document.createElement('button');
+                row.type = 'button';
+                row.className = 'w-full flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 text-left transition-colors';
+                row.innerHTML =
+                    (entry.image ? '<img src="' + entry.image + '" alt="" class="w-10 h-10 rounded-lg object-cover shrink-0">' : '<span class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 shrink-0"><i class="fa-solid fa-file-lines"></i></span>') +
+                    '<span class="text-sm font-medium text-slate-800">' + entry.label + '</span>';
+
+                row.addEventListener('click', function () {
+                    goToTarget(entry.id);
+                    // d) Réinitialise l'affichage (champ vidé, résultats masqués) après sélection
+                    inputEl.value = '';
+                    resultsEl.classList.add('hidden');
+                    resultsEl.innerHTML = '';
+                });
+
+                resultsEl.appendChild(row);
+            });
+
+            resultsEl.classList.remove('hidden');
+        }
+
+        function goToTarget(id) {
+            const target = document.getElementById(id);
+            if (!target) return;
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            target.classList.add('ring-2', 'ring-accentGold');
+            setTimeout(function () {
+                target.classList.remove('ring-2', 'ring-accentGold');
+            }, 1500);
+        }
+
+        // Branche un couple (input recherche + bouton + zone de résultats)
+        function setupSearch(inputId, buttonId, resultsId) {
+            const input = document.getElementById(inputId);
+            const button = document.getElementById(buttonId);
+            const resultsEl = document.getElementById(resultsId);
+            if (!input || !resultsEl) return;
+
+            function runSearch() {
+                // a) Récupère la valeur saisie dans l'input
+                const value = input.value;
+
+                // d) Réinitialise l'affichage si la recherche est vide
+                if (!value.trim()) {
+                    resultsEl.classList.add('hidden');
+                    resultsEl.innerHTML = '';
+                    return;
+                }
+
+                // b) Filtre les éléments correspondants
+                const matches = filterResults(value);
+
+                // c) Affiche uniquement les résultats filtrés
+                renderResults(matches, resultsEl, input);
+            }
+
+            // Filtrage en direct pendant la saisie
+            input.addEventListener('input', runSearch);
+
+            // Le bouton "Recherche" déclenche aussi le filtrage (et place le focus sur le champ)
+            if (button) {
+                button.addEventListener('click', function () {
+                    input.focus();
+                    runSearch();
+                });
+            }
+
+            // Entrée -> va directement au premier résultat
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    const matches = filterResults(input.value);
+                    if (matches.length) {
+                        goToTarget(matches[0].id);
+                        input.value = '';
+                        resultsEl.classList.add('hidden');
+                        resultsEl.innerHTML = '';
+                    }
+                }
+                if (e.key === 'Escape') {
+                    input.value = '';
+                    resultsEl.classList.add('hidden');
+                    resultsEl.innerHTML = '';
+                }
+            });
+
+            // Ferme la liste de résultats si on clique en dehors
+            document.addEventListener('click', function (e) {
+                if (!input.contains(e.target) && !resultsEl.contains(e.target) && (!button || !button.contains(e.target))) {
+                    resultsEl.classList.add('hidden');
+                }
+            });
+        }
+
+        setupSearch('site-search', 'search-btn', 'search-results');
+        setupSearch('site-search-mobile', 'search-btn-mobile', 'search-results-mobile');
     </script>
 
 </body>
